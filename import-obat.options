@@ -5,7 +5,7 @@ delimited_text
 -output_permissions
 kalbecare2-role,read,kalbecare2-role,update
 -output_collections
-obat
+pasien/obat
 -output_uri_suffix 
 ".json"
 -document_type

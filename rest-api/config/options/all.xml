@@ -5,7 +5,7 @@
   <!-- Limit all searches to this additional query -->
   <additional-query>
     <cts:collection-query xmlns:cts="http://marklogic.com/cts">
-      <cts:uri>obat</cts:uri>
+      <cts:uri>pasien/obat</cts:uri>
     </cts:collection-query>
   </additional-query>
 

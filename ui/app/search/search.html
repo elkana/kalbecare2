@@ -5,7 +5,7 @@
 </div>
 
 <div class="search row">
-  <ml-facets class="col-md-3 right-col" facets="ctrl.response.facets" toggle="ctrl.toggleFacet(facet, value)" active-facets="ctrl.mlSearch.activeFacets" negate="ctrl.toggleNegatedFacet(facet,value)"></ml-facets>
+  <ml-facets class="col-md-3 hidden-xs hidden-sm right-col" facets="ctrl.response.facets" toggle="ctrl.toggleFacet(facet, value)" active-facets="ctrl.mlSearch.activeFacets" negate="ctrl.toggleNegatedFacet(facet,value)"></ml-facets>
   <div class="col-md-9">
     <h4 ng-if="ctrl.response.total === 0">No results to show</h4>
 
