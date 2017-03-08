@@ -1,0 +1,31 @@
+<div class="card" ng-repeat="result in results track by $index">
+  <h4>
+    <a ui-sref="root.view({uri: result.uri})">{{ result.cust_name || result.uri }}</a>
+  </h4>
+  
+<table class="table table-condensed table-bordered">
+	<thead>
+		<tr>
+			<th>Age</th>
+			<th>Region</th>
+			<th>City</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ result.age }}</td>
+			<td>{{ result.region }}</td>
+			<td>{{ result.city }}</td>
+		</tr>
+	</tbody>
+</table>
+
+  <div class="matches">
+    <div class="match" ng-repeat="match in result.matches track by $index">
+      <em ng-repeat="text in match['match-text'] track by $index">
+        <span ng-class="{ highlight: !!text.highlight }">{{ text.highlight || text }}</span>
+      </em>
+    </div>
+  </div>
+  <hr>
+</div>
