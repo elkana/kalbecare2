@@ -4,9 +4,9 @@
   angular.module('app.landing')
     .controller('LandingCtrl', LandingCtrl);
 
-  LandingCtrl.$inject = ['$scope', 'userService', 'MLSearchFactory'];
+  LandingCtrl.$inject = ['$scope', '$state', 'userService', 'MLSearchFactory'];
 
-  function LandingCtrl($scope, userService, searchFactory) {
+  function LandingCtrl($scope, $state, userService, searchFactory) {
 
     var ctrl = this;
 

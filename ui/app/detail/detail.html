@@ -11,6 +11,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading" style="text-align:start;font-style:bold">
 						<strong>Basic Information</strong>
+						<div class="arrow-down" style="float:right"></div>
 					</div>
 					<div class="panel-body">
 						<table class="table table-bordered table-hover table-striped table-condensed">				
@@ -52,9 +53,79 @@
 			</div>
 		</div>
 	</div>
-  <div class="col-sm-8">
+  <div class="col-sm-5">
+	<div class="row">
+		<table id="kalbe-product">
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="150px">
+						<div class="btn btn-primary img-rounded">
+							<h4>Woods Expectorant Anak</h4>
+						</div>
+					</td>
+					<td width="150px">
+						<div class="btn btn-primary img-rounded">
+							<h4>Paracetamol Anak</h4>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="150px">
+						<div class="btn btn-success img-rounded">
+							<h4>Procold Flu Anak</h4>
+						</div>
+					</td>
+					<td width="150px">
+						<div class="btn btn-success img-rounded">
+							<h4>Woods Expectoran</h4>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="150px">
+						<div class="btn btn-warning img-rounded">
+							<h4>Procold Flu & Batuk</h4>
+						</div>
+					</td>
+					<td width="150px">
+						<div class="btn btn-warning img-rounded">
+							<h4>Neuralgin Pain</h4>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="150px">
+						<div class="btn btn-danger img-rounded">
+							<h4>Paracetamol</h4>
+						</div>
+					</td>
+					<td width="150px">
+						<div class="btn btn-danger img-rounded">
+							<h4>Promag Tablet</h4>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="150px">
+						<div class="btn btn-info img-rounded">
+							<h4>Counterpain</h4>
+						</div>
+					</td>
+					<td width="150px">
+						<div class="btn btn-info img-rounded">
+							<h4>Procold Flu</h4>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	</div>
     <!-- note -->
-    <uib-tabset type="pills">
+    <!--uib-tabset type="pills">
       <uib-tab ng-if="ctrl.type==='json'">
         <uib-tab-heading>JSON</uib-tab-heading>
         <div class="col-sm-9">
@@ -74,9 +145,10 @@
              class="btn btn-default">Download</a>
         </div>
       </uib-tab>
-    </uib-tabset>
+    </uib-tabset-->
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-12 col-md-7">
+	<div class="row">
     <div id="buttons-detail">
       <button class="btn btn-default" ui-sref="root.search">Search</button>
       <button class="btn btn-primary"
@@ -96,11 +168,12 @@
     </div>
     <br>
     <!-- show (links to) similar documents -->
-    <div class="panel panel-default">
+    <!-- div class="panel panel-default">
       <div class="panel-heading">Similar</div>
       <div class="panel-body">
         <ml-similar uri="{{ctrl.uri}}" limit="5"></ml-similar>
       </div>
-    </div>
+    </div-->
+  </div>
   </div>
 </div>
