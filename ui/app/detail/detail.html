@@ -29,6 +29,14 @@
 									<td>{{ctrl.json.alamat}} <span class="glyphicon glyphicon-map-marker" style="float:right"></span></td>
 								</tr>
 								<tr>
+									<td>Email</td>
+									<td>{{ctrl.json.email}} <span class="glyphicon glyphicon-envelope" style="float:right"></span></td>
+								</tr>
+								<tr>
+									<td>Phone</td>
+									<td>{{ctrl.json.phone}} <span class="glyphicon glyphicon-phone-alt" style="float:right"></span></td>
+								</tr>
+								<tr>
 									<td>Kriteria</td>
 									<td>{{ctrl.json.kriteria}}</td>
 								</tr>
@@ -55,15 +63,34 @@
 	</div>
   <div class="col-sm-5">
 	<div class="row">
-		<table id="kalbe-product">
+		<table id="kalbe-product" ng-init="WEA=(ctrl.json.age <= 12)
+										 ;PA=(ctrl.json.age <= 12)
+										 ;PFA=(ctrl.json.age <= 12)
+										 ;WE=(ctrl.json.age > 12)
+										 ;PFAB=(ctrl.json.age > 12)
+										 ;NP=(ctrl.json.age > 12)
+										 ;PARA=(ctrl.json.age > 12)
+										 ;PT=(ctrl.json.age > 12)
+										 ;CP=(ctrl.json.age > 12)
+										 ;PF=(ctrl.json.age > 12)
+										">
 			<thead>
 			</thead>
 			<tbody>
 				<tr>
 					<td width="150px">
-						<div class="btn btn-primary img-rounded" data-toggle="collapse" data-target="#demo1">
+						<div ng-if="WEA" class="btn btn-primary img-rounded" data-toggle="collapse" data-target="#demo11">
 							<h4>Woods Expectorant Anak</h4>
-							<div id="demo1" class="collapse" style="font-size:x-small">
+							<div id="demo11" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: ANAK</span>
+								<span><br/>Tipe Penyakit: Batuk Berdahak</span>
+								<span><br/>Jenis Obat: Botol</span>
+							</div>
+
+						</div>
+						<div ng-if="!WEA" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo12">
+							<h4>Woods Expectorant Anak</h4>
+							<div id="demo12" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: ANAK</span>
 								<span><br/>Tipe Penyakit: Batuk Berdahak</span>
 								<span><br/>Jenis Obat: Botol</span>
@@ -71,9 +98,18 @@
 						</div>
 					</td>
 					<td width="150px">
-						<div class="btn btn-primary img-rounded" data-toggle="collapse" data-target="#demo2">
+						<div ng-if="PA" class="btn btn-primary img-rounded" data-toggle="collapse" data-target="#demo21">
 							<h4>Paracetamol Anak</h4>
-							<div id="demo2" class="collapse" style="font-size:x-small">
+							<div id="demo21" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: ANAK</span>
+								<span><br/>Tipe Penyakit: Demam</span>
+								<span><br/>Jenis Obat: Batuk Kering</span>
+							</div>
+
+						</div>
+						<div ng-if="!PA" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo22">
+							<h4>Paracetamol Anak</h4>
+							<div id="demo22" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: ANAK</span>
 								<span><br/>Tipe Penyakit: Demam</span>
 								<span><br/>Jenis Obat: Batuk Kering</span>
@@ -83,9 +119,18 @@
 				</tr>
 				<tr>
 					<td width="150px">
-						<div class="btn btn-success img-rounded" data-toggle="collapse" data-target="#demo3">
+						<div ng-if="PFA" class="btn btn-success img-rounded" data-toggle="collapse" data-target="#demo31">
 							<h4>Procold Flu Anak</h4>
-							<div id="demo3" class="collapse" style="font-size:x-small">
+							<div id="demo31" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: ANAK</span>
+								<span><br/>Tipe Penyakit: Pusing</span>
+								<span><br/>Jenis Obat: Kaplet</span>
+							</div>
+
+						</div>
+						<div ng-if="!PFA" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo32">
+							<h4>Procold Flu Anak</h4>
+							<div id="demo32" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: ANAK</span>
 								<span><br/>Tipe Penyakit: Pusing</span>
 								<span><br/>Jenis Obat: Kaplet</span>
@@ -93,9 +138,18 @@
 						</div>
 					</td>
 					<td width="150px">
-						<div class="btn btn-success img-rounded" data-toggle="collapse" data-target="#demo4">
+						<div ng-if="WE" class="btn btn-success img-rounded" data-toggle="collapse" data-target="#demo41">
 							<h4>Woods Expectoran</h4>
-							<div id="demo4" class="collapse" style="font-size:x-small">
+							<div id="demo41" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Batuk Berdahak</span>
+								<span><br/>Jenis Obat: Botol</span>
+							</div>
+
+						</div>
+						<div ng-if="!WE" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo42">
+							<h4>Woods Expectoran</h4>
+							<div id="demo42" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Batuk Berdahak</span>
 								<span><br/>Jenis Obat: Botol</span>
@@ -105,9 +159,18 @@
 				</tr>
 				<tr>
 					<td width="150px">
-						<div class="btn btn-warning img-rounded" data-toggle="collapse" data-target="#demo5">
+						<div ng-if="PFAB" class="btn btn-warning img-rounded" data-toggle="collapse" data-target="#demo51">
 							<h4>Procold Flu & Batuk</h4>
-							<div id="demo5" class="collapse" style="font-size:x-small">
+							<div id="demo51" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Batuk Kering</span>
+								<span><br/>Jenis Obat: Kaplet</span>
+							</div>
+
+						</div>
+						<div ng-if="!PFAB" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo52">
+							<h4>Procold Flu & Batuk</h4>
+							<div id="demo52" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Batuk Kering</span>
 								<span><br/>Jenis Obat: Kaplet</span>
@@ -115,9 +178,18 @@
 						</div>
 					</td>
 					<td width="150px">
-						<div class="btn btn-warning img-rounded" data-toggle="collapse" data-target="#demo6">
+						<div ng-if="NP" class="btn btn-warning img-rounded" data-toggle="collapse" data-target="#demo61">
 							<h4>Neuralgin Pain</h4>
-							<div id="demo6" class="collapse" style="font-size:x-small">
+							<div id="demo61" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Cedera</span>
+								<span><br/>Jenis Obat: Tube</span>
+							</div>
+
+						</div>
+						<div ng-if="!NP" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo62">
+							<h4>Neuralgin Pain</h4>
+							<div id="demo62" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Cedera</span>
 								<span><br/>Jenis Obat: Tube</span>
@@ -127,9 +199,18 @@
 				</tr>
 				<tr>
 					<td width="150px">
-						<div class="btn btn-danger img-rounded" data-toggle="collapse" data-target="#demo7">
+						<div ng-if="PARA" class="btn btn-danger img-rounded" data-toggle="collapse" data-target="#demo71">
 							<h4>Paracetamol</h4>
-							<div id="demo7" class="collapse" style="font-size:x-small">
+							<div id="demo71" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Demam</span>
+								<span><br/>Jenis Obat: Kaplet</span>
+							</div>
+
+						</div>
+						<div ng-if="!PARA" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo72">
+							<h4>Paracetamol</h4>
+							<div id="demo72" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Demam</span>
 								<span><br/>Jenis Obat: Kaplet</span>
@@ -137,9 +218,18 @@
 						</div>
 					</td>
 					<td width="150px">
-						<div class="btn btn-danger img-rounded" data-toggle="collapse" data-target="#demo8">
+						<div ng-if="PT" class="btn btn-danger img-rounded" data-toggle="collapse" data-target="#demo73">
 							<h4>Promag Tablet</h4>
-							<div id="demo8" class="collapse" style="font-size:x-small">
+							<div id="demo73" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Maag</span>
+								<span><br/>Jenis Obat: Kaplet</span>
+							</div>
+
+						</div>
+						<div ng-if="!PT" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo74">
+							<h4>Promag Tablet</h4>
+							<div id="demo74" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Maag</span>
 								<span><br/>Jenis Obat: Kaplet</span>
@@ -149,9 +239,18 @@
 				</tr>
 				<tr>
 					<td width="150px">
-						<div class="btn btn-info img-rounded" data-toggle="collapse" data-target="#demo9">
+						<div ng-if="CP" class="btn btn-info img-rounded" data-toggle="collapse" data-target="#demo81">
 							<h4>Counterpain</h4>
-							<div id="demo9" class="collapse" style="font-size:x-small">
+							<div id="demo81" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Nyeri Sendi</span>
+								<span><br/>Jenis Obat: Tube</span>
+							</div>
+
+						</div>
+						<div ng-if="!CP" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo82">
+							<h4>Counterpain</h4>
+							<div id="demo82" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Nyeri Sendi</span>
 								<span><br/>Jenis Obat: Tube</span>
@@ -159,9 +258,18 @@
 						</div>
 					</td>
 					<td width="150px">
-						<div class="btn btn-info img-rounded" data-toggle="collapse" data-target="#demo10">
+						<div ng-if="PF" class="btn btn-info img-rounded" data-toggle="collapse" data-target="#demo83">
 							<h4>Procold Flu</h4>
-							<div id="demo10" class="collapse" style="font-size:x-small">
+							<div id="demo83" class="collapse" style="font-size:x-small">
+								<span><p/>Kriteria: DEWASA</span>
+								<span><br/>Tipe Penyakit: Pusing</span>
+								<span><br/>Jenis Obat: Kaplet</span>
+							</div>
+
+						</div>
+						<div ng-if="!PF" class="btn btn-default img-rounded disabled" data-toggle="collapse" data-target="#demo84">
+							<h4>Procold Flu</h4>
+							<div id="demo84" class="collapse" style="font-size:x-small">
 								<span><p/>Kriteria: DEWASA</span>
 								<span><br/>Tipe Penyakit: Pusing</span>
 								<span><br/>Jenis Obat: Kaplet</span>
@@ -169,6 +277,7 @@
 						</div>
 					</td>
 				</tr>
+
 			</tbody>
 		</table>
 	</div>

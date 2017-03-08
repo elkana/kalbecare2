@@ -12,6 +12,7 @@
 
     angular.extend(ctrl, {
 		search: cari,
+	  patient: top10Chart('Patients', 'pie', 'Patient', 'Patient', 50),
 	  city: top10Chart('Cities', 'pie', 'City', 'City', 50),
       age: top10Chart('Age', 'bar', 'Umur', 'Age', 50),
       region: top10Chart('Region', 'bar', 'Region', 'Region', 50),
